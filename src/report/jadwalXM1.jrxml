@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="59074e76-0aee-4931-b378-fb78a6af6487">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     jadwal.`kodemapel` AS jadwal_kodemapel,
+     jadwal.`kodeguru` AS jadwal_kodeguru,
+     jadwal.`ruang` AS jadwal_ruang,
+     jadwal.`jam` AS jadwal_jam
+FROM
+     `jadwal` jadwal
+WHERE
+kelas = 'X MM 1']]>
+	</queryString>
+	<field name="jadwal_kodemapel" class="java.lang.String"/>
+	<field name="jadwal_kodeguru" class="java.lang.String"/>
+	<field name="jadwal_ruang" class="java.lang.String"/>
+	<field name="jadwal_jam" class="java.lang.String"/>
+	<group name="jadwal_jam">
+		<groupExpression><![CDATA[$F{jadwal_jam}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="107" splitType="Stretch">
+			<staticText>
+				<reportElement x="120" y="43" width="435" height="20" uuid="840f1979-8731-4895-8711-250b61498e62"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cooper Black" size="14"/>
+				</textElement>
+				<text><![CDATA[SMK Negeri 1 Tapen]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="23" width="435" height="20" uuid="cd35ba54-ee37-4bf1-8b4c-a79a34596ca0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cooper Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Jadwal Pelajaran Kelas X MM 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="61" width="435" height="20" uuid="aa4d8987-3713-4acd-808f-4c2589de8b32"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cooper Black" size="14"/>
+				</textElement>
+				<text><![CDATA[Tahun Pelajaran 2014 - 2015]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="104" height="105" uuid="d7e041fa-1015-4c6a-ae91-7c09cef524a4"/>
+				<imageExpression><![CDATA["D:\\SMK N Tapen\\Project\\UPK\\UKK\\src\\image\\smkn tapen.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="1" width="99" height="20" uuid="70c412e4-8478-4d87-bf67-a9b91779592e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cooper Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Hari]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="1" width="94" height="20" uuid="2235d1c7-a33d-437c-a3e0-bf291b00d70b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cooper Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Jam]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="155" height="21" uuid="8692ba0d-869e-465d-b55d-080e1df05d31"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cooper Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Kode Mata Pelajaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="0" width="100" height="20" uuid="6ac5b3f9-88ee-4988-b6b5-d977b2f3dce5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cooper Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Ruang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="1" width="100" height="20" uuid="15ac9220-a74c-48fc-aeaf-d3daf2d22b4d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cooper Black" size="12"/>
+				</textElement>
+				<text><![CDATA[Kode Guru]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="21" width="555" height="1" uuid="d047fe6c-bb17-4f01-b9e3-db7d59b4750b"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="ac80e028-d6fc-49bc-9889-4d0774417213"/>
+			</line>
+			<line>
+				<reportElement x="0" y="1" width="1" height="19" uuid="74b2fe88-17bc-48b0-8973-4c21b90c81e1"/>
+			</line>
+			<line>
+				<reportElement x="102" y="1" width="1" height="18" uuid="245c8467-7841-42a2-bcae-16dce57d0871"/>
+			</line>
+			<line>
+				<reportElement x="198" y="1" width="1" height="22" uuid="e6d0697f-4c5c-4e4f-845b-f487caf9e9cd"/>
+			</line>
+			<line>
+				<reportElement x="357" y="1" width="1" height="20" uuid="9c7c7a88-345a-4e1f-b02d-a1bc8702de18"/>
+			</line>
+			<line>
+				<reportElement x="455" y="2" width="1" height="21" uuid="513bbc28-011e-45ad-8ec6-189f237b725c"/>
+			</line>
+			<line>
+				<reportElement x="555" y="2" width="1" height="21" uuid="dc74959b-d80c-4ccb-b8b7-99d3696c3ea4"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="129" y="0" width="65" height="20" uuid="aa554642-59c9-40ed-bceb-1ce9b929919a"/>
+				<textFieldExpression><![CDATA[$F{jadwal_jam}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="253" y="0" width="58" height="20" uuid="cbbf8dd9-5b9e-44ab-8b19-1318acfdded6"/>
+				<textFieldExpression><![CDATA[$F{jadwal_kodemapel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="388" y="0" width="49" height="20" uuid="f3e96d51-6941-41b9-979f-3b7e61d80cd3"/>
+				<textFieldExpression><![CDATA[$F{jadwal_kodeguru}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="486" y="0" width="40" height="20" uuid="fa2d2405-b0cd-42a1-84f4-ad1369c85b89"/>
+				<textFieldExpression><![CDATA[$F{jadwal_ruang}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="554" y="0" width="1" height="21" uuid="3324daba-c589-4601-9202-802f1b959325"/>
+			</line>
+			<line>
+				<reportElement x="455" y="0" width="1" height="21" uuid="6e60e00b-6f1e-469f-a84c-bfe7a67b6033"/>
+			</line>
+			<line>
+				<reportElement x="0" y="21" width="555" height="1" uuid="82badb5e-54bd-49e6-92aa-3c96791d10d1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="-2" width="1" height="22" uuid="be16b72c-0816-4828-801c-02ee2aba030f"/>
+			</line>
+			<line>
+				<reportElement x="102" y="-4" width="1" height="24" uuid="abfacdfd-9da5-4234-8e13-b3cdc5e3cd61"/>
+			</line>
+			<line>
+				<reportElement x="198" y="-1" width="1" height="22" uuid="bc2cdd1a-718f-4512-910b-dd73390b4561"/>
+			</line>
+			<line>
+				<reportElement x="357" y="-1" width="1" height="22" uuid="90724e80-e703-4abe-b3ab-d53fb2f7ecad"/>
+			</line>
+			<staticText>
+				<reportElement x="34" y="1" width="65" height="20" uuid="217b8263-83dc-4756-96fc-0442b568a981"/>
+				<textElement>
+					<font fontName="Cooper Black"/>
+				</textElement>
+				<text><![CDATA[Senin]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
